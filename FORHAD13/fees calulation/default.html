@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../ASIAN%20INTERNATIONAL%20SCHOOL.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>fees calculation</title>
+<style type="text/css">
+.auto-style2 {
+	text-align: center;
+	font-size: medium;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.auto-style3 {
+	text-align: center;
+}
+</style>
+<!-- #EndEditable -->
+<link href="../styles/style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	font-size: x-large;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<h1 class="auto-style1">
+		<img alt="" height="77" src="../download%20(1).png" style="float: left" width="103" />ASIAN 
+		INTERNATIONAL SCHOOL</h1>
+		<h3>"EDUCATION IS POWER"</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="../home.html">Home</a></li>
+			<li><a href="../about/default.html">About</a></li>
+			<li><a href="../admission%20form/admission.html">Admission</a></li>
+			<li><a href="default.html">Fees Calculation</a></li>
+			<li><a href="../facilities/facilities.html">Facilities</a></li>
+			<li><a href="../contact/contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Content -->
+	<div id="content">
+		<!-- #BeginEditable "content" -->
+	<p class="auto-style2"><strong>SCHOOL FEES</strong></p>
+		<table style="width: 100%">
+			<tr>
+				<td class="auto-style3">Fees for class</td>
+				<td class="auto-style3">first term</td>
+				<td class="auto-style3">Second term</td>
+				<td class="auto-style3">Third trem</td>
+			</tr>
+			<tr>
+				<td class="auto-style3">From 1 to 5 </td>
+				<td class="auto-style3">140 KD</td>
+				<td class="auto-style3">145 KD</td>
+				<td class="auto-style3">150 KD</td>
+			</tr>
+			<tr>
+				<td class="auto-style3" style="height: 25px">From 6 to 10</td>
+				<td class="auto-style3" style="height: 25px">145 KD</td>
+				<td class="auto-style3" style="height: 25px">150 KD</td>
+				<td class="auto-style3" style="height: 25px">155 KD</td>
+			</tr>
+			<tr>
+				<td class="auto-style3">From 11 to 12</td>
+				<td class="auto-style3">150 KD</td>
+				<td class="auto-style3">155 KD</td>
+				<td class="auto-style3">160 KD</td>
+			</tr>
+		</table>
+		<p>Our monthly magazin is also includes in our school fees KD 5 in term.</p>
+		<p>School bus KD 30.</p>
+	<script>
+function calc()
+{
+    fees = 0
+   if(document.frm.s1.value == "a")
+    {
+      if(document.frm.r1.value == "m1")
+       fees = 140
+      else if(document.frm.r1.value == "m2")
+       fees = 145
+      else
+       fees = 150
+    }
+   else if(document.frm.s1.value == "b")
+    {
+      if(document.frm.r1.value == "m1")
+       fees = 145
+      else if(document.frm.r1.value == "m2")
+       fees = 150
+      else
+       fees = 155
+    }
+   else if(document.frm.s1.value == "c")
+    {
+      if(document.frm.r1.value == "m1")
+       fees = 150
+      else if(document.frm.r1.value == "m2")
+       fees = 155
+      else
+       fees = 160
+    }
+  document.frm.t2.value = fees + " KD";
+  
+ magzin = 5
+ document.frm.t1.value = magzin + " KD";
+ bus = 0
+  if(document.frm.r2.value == "n1")
+   bus = 30
+ else 
+   document.frm.t4.value = bus + " KD";
+ total = 0
+ total = fees + magzin + bus;
+ document.frm.t3.value = total + " KD";
+document.frm.t4.value = bus + " KD";
+}
+
+
+
+</script>
+<center><b> FEES CALCULATION
+<form name = "frm">
+
+     <table border="2" width="75%" bgcolor="#f1f1f1">
+
+        <tr>
+        <td>Class
+            <td><select name="s1"> 
+<option value="a">1 to 5</option>     
+<option value="b">6 to 10</option>
+<option value="c">11 to 12</option>  
+</select>  
+        </tr>
+        <tr>
+            <td colspan = 2 align = "middle"><input type= "radio" name= "r1" value= "m1">First Fees
+            <input type="radio" name= "r1" value= "m2">Second Fees
+            <input type= "radio" name= "r1" value= "m3">Third Fees
+        </tr>
+         <tr>
+         <td>School Bus
+            <td align = "middle"><input type= "radio" name= "r2" value= "n1">YES
+            <input type= "radio" name= "r2" value= "n2">NO
+            </tr>
+         <tr>
+             <td colspan = 2 align = "middle"><input type="button" value="Calculate" name="B1" onClick = "calc()"></td>
+        </tr>
+        <tr>
+            <td>School Magzin</td>
+            <td><input type=" text" name="t1" size="20"></td>
+        </tr>
+         <tr>
+            <td>School Bus</td>
+            <td><input type=" text" name="t4" size="20"></td>
+        </tr>
+        <tr>
+            <td>School Fees</td>
+            <td><input type=" text" name="t2" size="20"></td>
+        </tr>
+        <tr>
+            <td>total amount</td>
+            <td><input type=" text" name="t3" size="20"></td>
+        </tr>
+</form></b>
+
+		<table border="2" width= 50%" bgcolor="#f1f1f1">
+
+        </div>
+	<!-- End Content -->
+	<!-- Begin Footer -->
+	<div id="footer">
+		<!-- #EndEditable "content" --><center>
+		<table border="2" width= 50%" bgcolor="#f1f1f1">
+
+        	<center>
+		<table border="2" width= 50%" bgcolor="#f1f1f1">
+
+        	<center>
+		<table border="2" width= 50%" bgcolor="#f1f1f1">
+
+        	<center>
+		<table border="2" width= 50%" bgcolor="#f1f1f1">
+
+        	<center>
+		<table border="2" width= 50%" bgcolor="#f1f1f1">
+
+        	</div>
+	<!-- End Content -->
+	<!-- Begin Footer -->
+	<div id="footer">
+		<p><a href="../home.html">Home</a> | <a href="../about/default.html">About</a>
+		| <a href="../admission%20form/admission.html">Admssion Form</a> | 
+		<a href="default.html">
+		Fees  Calculation</a> | <a href="../facilities/facilities.html">Facilities</a> |
+		<a href="../contact/contact.html">Contact</a> 
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
